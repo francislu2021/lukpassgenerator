@@ -9,16 +9,16 @@ if (idConfirm) {
     window.alert('Your verification process failed. Please follow the guards and leave the premise immediately!');
 }
 
-// GenerateBtn
+// set GenerateBtn 
 var generateBtn = document.querySelector("#generate");
 
-// Define variables
+// set variables
 var selectLowerCase;
 var selectUpperCase;
 var selectNumber;
 var selectSpecial;
 
-// Set variables  
+// assign variables  
 var plength = 0;
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 // Uppercase conversion
@@ -39,12 +39,12 @@ function writePassword() {
     // Request length of the password
     plength = parseInt(prompt(" Be aware you are entering luknator random password generator. To begin, please choose a length of your password from 8-128.", ""));
 
-    // Require number
+    // Require number function
     while (isNaN(plength)) {
         plength = parseInt(prompt("Please be aware to enter a number between 8 - 128.", ""));
     }
 
-    // Require length    
+    // Require length function    
     while (plength < 8 || plength > 128) {
         plength = parseInt(prompt("Enter length of password.* Length must be between 8 - 128 characters", ""));
     }
@@ -67,10 +67,10 @@ function writePassword() {
 generate.addEventListener("click", writePassword);
 
 
-// Call function to generate password 
+// Call function to generate random password 
 generatePassword();
 
-// Write generated password on page
+// Write password in specified display box
 document.getElementById("password").innerHTML = userPassword;
 
 // From selected options randomly generate password.
@@ -96,7 +96,7 @@ function generatePassword() {
     return userPassword;
 }
 
-// COPY FUNCTION 
+// Copy functions
 var copy = document.querySelector("#copy");
 copy.addEventListener("click", function() {
     copyPassword();
