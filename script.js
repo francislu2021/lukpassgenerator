@@ -1,4 +1,14 @@
 // luknator password generato
+
+//alert before click on passgen
+var idConfirm = window.prompt('Welcome to Luknator Password Generator! Please enter your legal name to begin!');
+
+if (idConfirm) {
+    window.confirm('Please present your crendentials to the guards! Under guards surveillance, please click generate password to begin the process!');
+} else {
+    window.alert('Your verification process failed. Please follow the guards and leave the premise immediately!');
+}
+
 // GenerateBtn
 var generateBtn = document.querySelector("#generate");
 
@@ -27,11 +37,11 @@ var selectSpecial;
 function writePassword() {
 
     // Request length of the password
-    plength = parseInt(prompt("Luknator Welcome to Password Generator. To begin, please choose a length of your password from 8-128.", ""));
+    plength = parseInt(prompt(" Be aware you are entering luknator random password generator. To begin, please choose a length of your password from 8-128.", ""));
 
     // Require number
     while (isNaN(plength)) {
-        plength = parseInt(prompt("This is not a number. Please enter a number between 8 - 128.", ""));
+        plength = parseInt(prompt("Please be aware to enter a number between 8 - 128.", ""));
     }
 
     // Require length    
